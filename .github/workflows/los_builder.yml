@@ -1,4 +1,4 @@
-name: Kernel Builder for Xiaomi Pad 6
+name: Los Kernel Builder for Xiaomi Pad 6
 
 on:
   push:
