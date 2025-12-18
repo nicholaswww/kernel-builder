@@ -110,9 +110,6 @@ jobs:
         echo "Cloning AnyKernel3 for packing kernel..."
         git clone https://github.com/nicholaswww/AnyKernel3 -b pipa-br --single-branch --depth=1 anykernel
 
-        echo "Cloning Ksu-Next..."
-        git clone --branch v1.1.1 --depth=1 https://github.com/KernelSU-Next/KernelSU-Next
-        
         echo "Building for PIPA..."
         make $MAKE_ARGS vendor/kona-perf_defconfig vendor/debugfs.config vendor/xiaomi/sm8250-common.config vendor/xiaomi/pipa.config 
         make $MAKE_ARGS -j$(nproc --all) 2> >(tee -a error.log >&2)
